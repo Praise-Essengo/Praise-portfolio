@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+    body { background:#0f172a; color:#e5e7eb; }
+
+    header {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:20px 40px; background:#020617; flex-wrap:wrap;
+    }
+    header h1 { color:#22c55e; font-size:22px; }
+    nav { display:flex; flex-wrap:wrap; gap:16px; }
+    nav a { text-decoration:none; color:#cbd5f5; font-weight:500; }
+    nav a:hover { color:#22c55e; }
+
+    .hero {
+      display:grid; grid-template-columns:1fr 1fr; gap:40px;
+      padding:60px 40px; align-items:center;
+    }
+    .hero h2 { font-size:40px; margin-bottom:10px; }
+    .hero span { color:#22c55e; }
+    .hero p { max-width:520px; line-height:1.7; color:#94a3b8; }
+
+    .btn {
+      display:inline-block; margin-top:26px; padding:14px 28px;
+      background:#22c55e; color:#020617; border-radius:8px;
+      font-weight:600; text-decoration:none;
+    }
+
+    .profile {
+      width:300px; height:340px; background:#22c55e;
+      clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      display:flex; align-items:center; justify-content:center;
+      margin:auto;
+    }
+    .profile img { width:90%; border-radius:12px; }
+
+    section { padding:70px 40px; }
+    section h3 { font-size:30px; margin-bottom:30px; }
+
+    .services, .projects {
+      display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:24px;
+    }
+
+    .card, .project {
+      background:#020617; padding:28px; border-radius:14px;
+      transition:0.3s; border:1px solid #020617;
+    }
+    .card:hover, .project:hover { border-color:#22c55e; transform:translateY(-6px); }
+    .card h4 { margin-bottom:10px; color:#22c55e; }
+    .card p { color:#94a3b8; font-size:14px; }
+
+    form { max-width:500px; }
+    form input, form textarea {
+      width:100%; margin-bottom:16px; padding:14px;
+      border-radius:8px; border:none; outline:none;
+      background:#020617; color:#e5e7eb;
+    }
+
+    footer {
+      text-align:center; padding:30px; background:#020617; color:#64748b;
+    }
+
+    @media (max-width: 768px) {
+      .hero { grid-template-columns:1fr; text-align:center; }
+      .hero p { margin:auto; }
+      header { justify-content:center; gap:14px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Portfolio</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>Hello, I'm <span>Praise Essengo</span></h2>
+    <h3>Web Designer,UI/UX Designer & Graphic Designer</h3>
+    <p>I design modern, user-friendly interfaces and engaging digital experiences for web and mobile applications, with a focus on clarity, usability, and visual impact.</p>
+    <a href="#contact" class="btn">Let's Talk</a>
+  </div>
+  <div class="profile">
+    <img src="C:\Users\user\OneDrive\Desktop\Praise.html" alt="Profile">
+  </div>
+</section>
+
+<section id="services">
+  <h3>What I Do</h3>
+  <div class="services">
+    <div class="card">
+      <h4>UI/UX Design</h4>
+      <p>Designing intuitive and engaging digital experiences.</p>
+    </div>
+    <div class="card">
+      <h4>Graphic Design</h4>
+      <p>Branding, logos, and visual communication.</p>
+    </div>
+    <div class="card">
+      <h4>Web Design</h4>
+      <p>Responsive and modern website layouts.</p>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <h3>Recent Projects</h3>
+  <div class="projects">
+    <div class="project">Project 1</div>
+    <div class="project">Project 2</div>
+    <div class="project">Project 3</div>
+  </div>
+</section>
+
+<section id="contact">
+  <h3>Contact Me</h3>
+  <p style="margin-bottom:20px; color:#94a3b8">Have a project or idea? Send me a message and I’ll get back to you.</p>
+  <form action="https://formspree.io/f/your-form-id" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button class="btn" type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  © 2025 Praise Essengo. All Rights Reserved.
+</footer>
+
+</body>
+</html>
