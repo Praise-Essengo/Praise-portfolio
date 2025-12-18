@@ -3,73 +3,190 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Personal Portfolio</title>
+  <title>Praise Essengo | UI/UX & Graphic Designer</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Praise Essengo – UI/UX and Graphic Designer creating modern, user-friendly digital experiences and responsive web designs." />
+  <meta name="keywords" content="Praise Essengo, UI UX Designer, Graphic Designer, Web Designer, Portfolio" />
+  <meta name="author" content="Praise Essengo" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Praise Essengo Portfolio" />
+  <meta property="og:description" content="UI/UX & Graphic Designer – modern, responsive, and user-focused designs." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
-    body { background:#0f172a; color:#e5e7eb; }
+    /* =========================
+       GLOBAL BACKGROUND SCHEME
+       ========================= */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
+    html, body {
+      width: 100%;
+      min-height: 100%;
+    }
+
+    body {
+      background-color: #020617; /* MAIN BACKGROUND – FULL SITE */
+      color: #e5e7eb;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.7;
+    }
+
+    section, header, footer {
+      background-color: #020617; /* ENSURES NO PARTIAL BACKGROUNDS */
+    }
+
+    /* =========================
+       HEADER
+       ========================= */
     header {
-      display:flex; justify-content:space-between; align-items:center;
-      padding:20px 40px; background:#020617; flex-wrap:wrap;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 60px;
     }
-    header h1 { color:#22c55e; font-size:22px; }
-    nav { display:flex; flex-wrap:wrap; gap:16px; }
-    nav a { text-decoration:none; color:#cbd5f5; font-weight:500; }
-    nav a:hover { color:#22c55e; }
 
-    .hero {
-      display:grid; grid-template-columns:1fr 1fr; gap:40px;
-      padding:60px 40px; align-items:center;
+    header h1 { color: #22c55e; font-size: 22px; }
+
+    nav a {
+      margin-left: 24px;
+      text-decoration: none;
+      color: #cbd5f5;
+      font-weight: 500;
     }
-    .hero h2 { font-size:40px; margin-bottom:10px; }
-    .hero span { color:#22c55e; }
-    .hero p { max-width:520px; line-height:1.7; color:#94a3b8; }
+
+    nav a:hover { color: #22c55e; }
+
+    /* =========================
+       HERO SECTION
+       ========================= */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      padding: 80px 60px;
+      align-items: center;
+    }
+
+    .hero h2 { font-size: 42px; margin-bottom: 10px; }
+    .hero span { color: #22c55e; }
+    .hero p { max-width: 520px; color: #94a3b8; }
 
     .btn {
-      display:inline-block; margin-top:26px; padding:14px 28px;
-      background:#22c55e; color:#020617; border-radius:8px;
-      font-weight:600; text-decoration:none;
+      display: inline-block;
+      margin-top: 26px;
+      padding: 14px 28px;
+      background: #22c55e;
+      color: #020617;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
     }
 
     .profile {
-      width:300px; height:340px; background:#22c55e;
-      clip-path:polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-      display:flex; align-items:center; justify-content:center;
-      margin:auto;
-    }
-    .profile img { width:90%; border-radius:12px; }
-
-    section { padding:70px 40px; }
-    section h3 { font-size:30px; margin-bottom:30px; }
-
-    .services, .projects {
-      display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:24px;
+      width: 320px;
+      height: 360px;
+      background: #22c55e;
+      clip-path: circle(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .card, .project {
-      background:#020617; padding:28px; border-radius:14px;
-      transition:0.3s; border:1px solid #020617;
+    .profile img {
+      width: 90%;
+      border-radius: 12px;
     }
-    .card:hover, .project:hover { border-color:#22c55e; transform:translateY(-6px); }
-    .card h4 { margin-bottom:10px; color:#22c55e; }
-    .card p { color:#94a3b8; font-size:14px; }
 
-    form { max-width:500px; }
+    /* =========================
+       SECTIONS
+       ========================= */
+    section {
+      padding: 80px 60px;
+    }
+
+    section h3 {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+
+    /* =========================
+       SERVICES
+       ========================= */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #0f172a;
+      padding: 30px;
+      border-radius: 14px;
+      border: 1px solid #020617;
+    }
+
+    .card h4 { color: #22c55e; margin-bottom: 12px; }
+    .card p { color: #94a3b8; font-size: 14px; }
+
+    /* =========================
+       PROJECTS (FULL BACKGROUND)
+       ========================= */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    .project {
+      background-color: #0f172a;
+      padding: 36px;
+      border-radius: 16px;
+      border: 1px solid #020617;
+    }
+
+    .project h4 { color: #22c55e; margin-bottom: 14px; }
+    .project p { color: #e5e7eb; font-size: 15px; margin-bottom: 16px; }
+    .project ul { color: #94a3b8; font-size: 14px; margin-bottom: 16px; }
+    .project span { font-size: 13px; color: #64748b; }
+
+    /* =========================
+       CONTACT
+       ========================= */
+    form {
+      max-width: 500px;
+    }
+
     form input, form textarea {
-      width:100%; margin-bottom:16px; padding:14px;
-      border-radius:8px; border:none; outline:none;
-      background:#020617; color:#e5e7eb;
+      width: 100%;
+      margin-bottom: 16px;
+      padding: 14px;
+      border-radius: 8px;
+      border: none;
+      background: #0f172a;
+      color: #e5e7eb;
     }
 
+    /* =========================
+       FOOTER
+       ========================= */
     footer {
-      text-align:center; padding:30px; background:#020617; color:#64748b;
+      text-align: center;
+      padding: 30px;
+      color: #64748b;
     }
 
+    /* =========================
+       RESPONSIVE
+       ========================= */
     @media (max-width: 768px) {
-      .hero { grid-template-columns:1fr; text-align:center; }
-      .hero p { margin:auto; }
-      header { justify-content:center; gap:14px; }
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      header { flex-direction: column; gap: 14px; }
     }
   </style>
 </head>
@@ -82,62 +199,124 @@
     <a href="#services">Services</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
+    <a href="https://github.com/your-github-username" target="_blank"><i class="fa-brands fa-github"></i></a>
   </nav>
 </header>
 
 <section class="hero">
   <div>
     <h2>Hello, I'm <span>Praise Essengo</span></h2>
-    <h3>Web Designer,UI/UX Designer & Graphic Designer</h3>
-    <p>I design modern, user-friendly interfaces and engaging digital experiences for web and mobile applications, with a focus on clarity, usability, and visual impact.</p>
+    <h3>UI/UX Designer & Graphic Designer</h3>
+    <p>I design modern, user-friendly interfaces and engaging digital experiences for web and mobile applications.</p>
     <a href="#contact" class="btn">Let's Talk</a>
+    <a href="Praise Essengo.pdf" class="btn" download><i class="fa-solid fa-download"></i> Download CV</a>
+</div>
   </div>
   <div class="profile">
-    <img src="C:\Users\user\OneDrive\Desktop\Praise.html" alt="Profile">
+    <img src="pappi.jpg" alt="Profile">
   </div>
 </section>
 
 <section id="services">
   <h3>What I Do</h3>
   <div class="services">
-    <div class="card">
-      <h4>UI/UX Design</h4>
-      <p>Designing intuitive and engaging digital experiences.</p>
-    </div>
-    <div class="card">
-      <h4>Graphic Design</h4>
-      <p>Branding, logos, and visual communication.</p>
-    </div>
-    <div class="card">
-      <h4>Web Design</h4>
-      <p>Responsive and modern website layouts.</p>
-    </div>
+    <div class="card"><h4>UI/UX Design</h4><p>Designing intuitive digital experiences.</p></div>
+    <div class="card"><h4>Graphic Design</h4><p>Branding and visual communication.</p></div>
+    <div class="card"><h4>Web Design</h4><p>Responsive modern websites.</p></div>
   </div>
 </section>
 
 <section id="projects">
   <h3>Recent Projects</h3>
   <div class="projects">
-    <div class="project">Project 1</div>
-    <div class="project">Project 2</div>
-    <div class="project">Project 3</div>
+    <div class="project">
+      <h4>Personal Portfolio Website</h4>
+      <p>A fully developed dark-themed portfolio focused on performance and UX.</p>
+      <ul><li>Responsive layout</li><li>SEO optimized</li><li>Contact integration</li></ul>
+      <span>HTML, CSS, UX</span>
+    </div>
+    <div class="project">
+      <h4>Mobile App UI Design</h4>
+      <p>Complete mobile UI from research to final design.</p>
+      <ul><li>User research</li><li>High-fidelity UI</li><li>Design system</li></ul>
+      <span>Figma</span>
+    </div>
+    <div class="project">
+      <h4>Brand Identity Design</h4>
+      <p>Logo, typography, and visual identity system.</p>
+      <ul><li>Brand guidelines</li><li>Marketing assets</li></ul>
+      <span>Illustrator, Photoshop</span>
+    </div>
   </div>
 </section>
 
 <section id="contact">
   <h3>Contact Me</h3>
-  <p style="margin-bottom:20px; color:#94a3b8">Have a project or idea? Send me a message and I’ll get back to you.</p>
-  <form action="https://formspree.io/f/your-form-id" method="POST">
+  <p style="max-width:600px; color:#94a3b8; margin-bottom:32px;">
+    Have a project, collaboration, or opportunity? Send me a message and I’ll get back to you directly via email.
+  </p>
+
+  <!-- CONTACT INFO -->
+  <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:24px; margin-bottom:40px;">
+    <div class="card">
+      <h4><i class="fa-solid fa-envelope"></i> Email</h4>
+      <p><a href="mailto:essengopraise4@gmail.com" style="color:#22c55e">essengopraise4@gmail.com</a></p>
+    </div>
+    <div class="card">
+      <h4><i class="fa-solid fa-phone"></i> Phone</h4>
+      <p><a href="tel:+254745852117" style="color:#22c55e">+254 745852117</a></p>
+    </div>
+    <div class="card">
+      <h4><i class="fa-solid fa-location-dot"></i> Location</h4>
+      <p>Nairobi, Kenya</p>
+    </div>
+  </div>
+
+  <!-- CONTACT FORM (FORMSPREE) -->
+  <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onsubmit="handleSubmit(event)">
     <input type="text" name="name" placeholder="Your Name" required>
     <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
     <button class="btn" type="submit">Send Message</button>
+    <p id="form-status" style="margin-top:16px"></p>
   </form>
+
+  <!-- QUICK CONTACT BUTTONS -->
+  <div style="margin-top:30px; display:flex; gap:18px; flex-wrap:wrap;">
+    <a class="btn" href="https://wa.me/254745852117?text=Hello%20Praise,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20work%20with%20you." target="_blank">
+      <i class="fa-brands fa-whatsapp"></i> WhatsApp
+    </a>
+    <a class="btn" href="https://github.com/your-github-username" target="_blank">
+      <i class="fa-brands fa-github"></i> GitHub
+  </div>
 </section>
 
-<footer>
-  © 2025 Praise Essengo. All Rights Reserved.
-</footer>
+<script>
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = e.target;
+    const status = document.getElementById('form-status');
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = '<span style="color:#22c55e">✔ Message sent successfully! I will reply via email.</span>';
+        form.reset();
+      } else {
+        status.innerHTML = '<span style="color:#ef4444">✖ Something went wrong. Please try again.</span>';
+      }
+    }).catch(() => {
+      status.innerHTML = '<span style="color:#ef4444">✖ Network error. Please try later.</span>';
+    });
+  }
+</script>
+
+<footer>© 2025 Praise Essengo. All Rights Reserved.</footer>
 
 </body>
 </html>
